@@ -1,3 +1,5 @@
+
+
 data E = IntLit Int
        | BoolLit Bool
        | Plus E E
@@ -29,3 +31,7 @@ minus (IntLit x) y = eval y
 exponet :: E-> E-> E
 exponet (IntLit x) (IntLit y) = IntLit (x^y)
 exponet (IntLit x) y = eval y 
+
+
+log2Sim :: E -> E
+log2Sim (IntLit x) = IntLit(round (logBase 2 (fromIntegral x)))
